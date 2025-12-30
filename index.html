@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourm'Edhec - Logos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .logo-card {
+            border: 1px solid #e5e5e5;
+            padding: 32px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .logo-card:hover {
+            border-color: #1a1a1a;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .logo-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .logo-specs {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: background 0.2s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .download-btn:hover {
+            background: #333;
+        }
+
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gourm'Edhec</h1>
+        <p class="subtitle">Téléchargez les logos de l'association</p>
+
+        <div class="logo-grid">
+            <div class="logo-card">
+                <div class="logo-title">Logo officiel PNG</div>
+                <div class="logo-specs">5000 × 5000 px</div>
+                <a href="#" class="download-btn" onclick="downloadPlaceholder('logo-officiel.png'); return false;">
+                    Télécharger PNG
+                </a>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo-title">Logo carré PNG</div>
+                <div class="logo-specs">5000 × 5000 px</div>
+                <a href="#" class="download-btn" onclick="downloadPlaceholder('logo-carre.png'); return false;">
+                    Télécharger PNG
+                </a>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo-title">Logo officiel SVG</div>
+                <div class="logo-specs">Format vectoriel</div>
+                <a href="#" class="download-btn" onclick="downloadPlaceholder('logo-officiel.svg'); return false;">
+                    Télécharger SVG
+                </a>
+            </div>
+
+            <div class="logo-card">
+                <div class="logo-title">Logo carré SVG</div>
+                <div class="logo-specs">Format vectoriel</div>
+                <a href="#" class="download-btn" onclick="downloadPlaceholder('logo-carre.svg'); return false;">
+                    Télécharger SVG
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadPlaceholder(filename) {
+            alert('Pour activer les téléchargements, remplacez les liens "#" par les URLs réelles de vos fichiers.\n\nExemple: href="./logos/' + filename + '"');
+        }
+    </script>
+</body>
+</html>
